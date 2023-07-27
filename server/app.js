@@ -4,6 +4,7 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const axios = require("axios");
+const cors = require("cors");
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(cors());
 app.use(
   bodyParser.urlencoded({
     extended: true,
