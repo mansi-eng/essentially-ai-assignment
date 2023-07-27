@@ -1,7 +1,7 @@
+import TickerForm from "./components/TickerForm";
+
 function App() {
-	return (
-		<h1>Hello world</h1>
-	);
+  return <TickerForm />;
 }
 
 export default App;
