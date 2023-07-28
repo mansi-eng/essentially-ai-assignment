@@ -1,4 +1,6 @@
-# Stock Data ![chart](https://cdn.iconscout.com/icon/free/png-256/free-chart-growth-1913955-1624750.png?f=webp)
+![chart](https://cdn.iconscout.com/icon/free/png-256/free-chart-growth-1913955-1624750.png?f=webp)
+
+# Stock Data
 
 ## Backend
 
