@@ -1,7 +1,9 @@
-import TickerForm from "./components/TickerForm";
+import TickerContainer from "./components/TickerContainer/TickerContainer";
+
+import "./styles.css";
 
 function App() {
-  return <TickerForm />;
+    return <TickerContainer />;
 }
 
 export default App;

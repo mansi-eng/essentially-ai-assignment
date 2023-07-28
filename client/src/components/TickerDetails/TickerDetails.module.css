@@ -1,0 +1,21 @@
+.container {
+    min-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    padding: 3rem 5rem;
+    margin-top: 3rem;
+    border-radius: 15px;
+}
+
+.heading {
+    font-size: 2.5rem;
+}
+
+.group-container {
+    display: flex;
+    gap: 4rem;
+    margin-top: 2rem;
+}
