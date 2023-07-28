@@ -1,4 +1,4 @@
-import DataGroup from "../DataGroup/DataGroup";
+import Data from "../Data/Data";
 import styles from "./TickerDetails.module.css";
 
 const TickerDetails = ({ data }) => {
@@ -7,12 +7,12 @@ const TickerDetails = ({ data }) => {
     return (
         <div className={styles["container"]}>
             <h2 className={styles["heading"]}>Ticker Details</h2>
-            <div className={styles["group-container"]}>
-                <DataGroup title={"Open"} data={open} />
-                <DataGroup title={"Close"} data={close} />
-                <DataGroup title={"High"} data={high} />
-                <DataGroup title={"Low"} data={low} />
-                <DataGroup title={"Volume"} data={volume} />
+            <div className={styles["data-container"]}>
+                <Data title={"Open"} data={open} />
+                <Data title={"Close"} data={close} />
+                <Data title={"High"} data={high} />
+                <Data title={"Low"} data={low} />
+                <Data title={"Volume"} data={volume} />
             </div>
         </div>
     );

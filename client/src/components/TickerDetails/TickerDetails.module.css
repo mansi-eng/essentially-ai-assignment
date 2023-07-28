@@ -14,7 +14,7 @@
     font-size: 2.5rem;
 }
 
-.group-container {
+.data-container {
     display: flex;
     gap: 4rem;
     margin-top: 2rem;
