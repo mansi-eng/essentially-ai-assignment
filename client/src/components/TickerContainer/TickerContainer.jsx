@@ -40,7 +40,11 @@ const TickerContainer = () => {
         } catch (err) {
             console.log(err.response.data);
             setHasError(true);
-            setErrorMsg(err.response.data.error.message);
+            if (err.response.data.error.message) {
+                setErrorMsg(err.response.data.error.message);
+            } else {
+                setErrorMsg("Something went wrong");
+            }
             setTickerData();
         }
         setIsLoading(false);
