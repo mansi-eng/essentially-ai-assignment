@@ -62,3 +62,11 @@ Error response:
 -   `TickerDetails` component renders the data.
 -   Loading and error states are handled and shown to the user.
 -   The submit button is disabled if user has not entered any of the fields.
+
+### Optimal Tasks
+
+-   Autocomplete stock tickers: Dropdown showing autocompletion suggestions for tickers.
+-   Implement Caching Mechanism: To improve response times.
+-   Pagination and infinite scroll: Show historical data for multiple days if user needs to.
+-   Data visualization: Show candlestick charts or line charts to represent data.
+-   Option to export data to csv or excel.
