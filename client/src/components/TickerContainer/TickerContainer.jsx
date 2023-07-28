@@ -8,7 +8,11 @@ const TickerContainer = () => {
     const [ticker, setTicker] = useState("");
     const [date, setDate] = useState("");
     const [tickerData, setTickerData] = useState();
+
+    // State to handle loading
     const [isLoading, setIsLoading] = useState(false);
+
+    // States to handle error
     const [hasError, setHasError] = useState(false);
     const [errorMsg, setErrorMsg] = useState("");
 
@@ -17,10 +21,13 @@ const TickerContainer = () => {
 
         setIsLoading(true);
         setHasError(false);
+
         const body = JSON.stringify({
             ticker,
             date,
         });
+
+        // Fetch data from our backend server
         try {
             const { data } = await axios.post(
                 "http://localhost:5000/api/fetchStockData",
