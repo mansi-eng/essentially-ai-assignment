@@ -38,3 +38,16 @@
     background-color: var(--color-blue);
     color: var(--color-white);
 }
+
+.loading,
+.error {
+    margin-top: 3rem;
+}
+
+.error {
+    color: var(--color-red);
+}
+
+.details {
+    min-height: 300px;
+}

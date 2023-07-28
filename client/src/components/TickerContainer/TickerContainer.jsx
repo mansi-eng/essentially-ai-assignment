@@ -10,6 +10,7 @@ const TickerContainer = () => {
     const [tickerData, setTickerData] = useState();
     const [isLoading, setIsLoading] = useState(false);
     const [hasError, setHasError] = useState(false);
+    const [errorMsg, setErrorMsg] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -27,10 +28,15 @@ const TickerContainer = () => {
                 { headers: { "Content-Type": "application/json" } }
             );
             setTickerData(data.data);
-            setIsLoading(false);
+            setErrorMsg("");
+            setHasError(false);
         } catch (err) {
+            console.log(err.response.data);
             setHasError(true);
+            setErrorMsg(err.response.data.error.message);
+            setTickerData();
         }
+        setIsLoading(false);
     };
 
     return (
@@ -55,13 +61,20 @@ const TickerContainer = () => {
                 <button
                     type="submit"
                     className={`${styles["input"]} ${styles["submit-btn"]}`}
+                    disabled={!ticker || !date || isLoading}
                 >
                     Submit
                 </button>
             </form>
-            {hasError && <div>Something went wrong.</div>}
-            {isLoading && !hasError && <div>Loading....</div>}
-            {!isLoading && tickerData && <TickerDetails data={tickerData} />}
+            <dir className={styles["details"]}>
+                {hasError && <div className={styles["error"]}>{errorMsg}</div>}
+                {isLoading && !hasError && (
+                    <div className={styles["loading"]}>Loading....</div>
+                )}
+                {!isLoading && tickerData && (
+                    <TickerDetails data={tickerData} />
+                )}
+            </dir>
         </div>
     );
 };
